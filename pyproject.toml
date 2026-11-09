@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperqueue"
+version = "0.1.0"
+description = "A high-throughput asynchronous task & event execution engine with priority scheduling and dead-letter queues"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "jurjees2122-sudo" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Distributed Computing",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "click>=8.0.0",
+]
+
+[project.scripts]
+hyperqueue = "hyperqueue.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hyperqueue*"]
